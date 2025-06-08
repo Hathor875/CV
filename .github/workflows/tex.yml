@@ -24,7 +24,7 @@ jobs:
         run: sudo apt-get install -y imagemagick ghostscript
 
       - name: Convert PDF to high-quality JPG preview
-        run: convert -density 300 -quality 100 -background white -alpha remove main.pdf[0] preview.jpg
+        run: convert -density 300 -quality 100 -background white  main.pdf[0] preview.jpg
 
       - name: Upload artifacts (for debugging or download)
         uses: actions/upload-artifact@v4
