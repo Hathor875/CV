@@ -20,8 +20,20 @@ jobs:
         with:
           root_file: main.tex
 
+      - name: Install ImageMagick
+        run: sudo apt-get install -y imagemagick ghostscript
+
+      - name: Convert PDF to JPG preview
+        run: convert -density 150 main.pdf[0] -quality 90 preview.jpg
+
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: main.pdf
           path: main.pdf
+
+      - name: Upload Preview Image
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview.jpg
+          path: preview.jpg
