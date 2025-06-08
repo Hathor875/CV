@@ -23,17 +23,24 @@ jobs:
       - name: Install ImageMagick
         run: sudo apt-get install -y imagemagick ghostscript
 
-      - name: Convert PDF to JPG preview
-        run: convert -density 150 main.pdf[0] -quality 90 preview.jpg
+      - name: Convert PDF to high-quality JPG preview
+        run: convert -density 300 -trim -quality 100 -background white -alpha remove main.pdf[0] preview.jpg
 
-      - name: Upload PDF
+      - name: Upload artifacts (for debugging or download)
         uses: actions/upload-artifact@v4
         with:
-          name: main.pdf
-          path: main.pdf
+          name: cv-artifacts
+          path: |
+            main.pdf
+            preview.jpg
 
-      - name: Upload Preview Image
-        uses: actions/upload-artifact@v4
-        with:
-          name: preview.jpg
-          path: preview.jpg
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cp main.pdf preview.jpg gh-pages/
+          cd gh-pages
+          git add main.pdf preview.jpg
+          git commit -m "Auto-update CV and preview [skip ci]" || echo "No changes to commit"
+          git push
