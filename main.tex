@@ -17,112 +17,144 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[9pt]{developercv}
 
+% Additional packages for better formatting
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=0pt, leftmargin=*, nosep}
+\usepackage{setspace}
+\setstretch{1.05}
+
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-% TITLE AND CONTACT INFORMATION
+% Header - Pixel Perfect Formatting
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.40\textwidth}
-	\vspace{-\baselineskip}
-	\colorbox{red}{{\HUGE\textcolor{white}{\textbf{KRZYSZTOF}}}}\\
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{CIEŚLIK}}}}\\
-	\vspace{6pt}
-	{\huge Embedded Developer}\\
-\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+    \vspace{-\baselineskip}
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{KRZYSZTOF}}}}\\[0.5ex]
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{CIEŚLIK}}}}\\[1ex]
+    {\huge Embedded Developer}\\
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\textwidth}
+    \vspace{-\baselineskip}
+    \icon{MapMarker}{12}{Gdańsk, Pomerania, Poland}\\[1ex]
+    \icon{Phone}{12}{XXXXXXXXX}\\[1ex]
+    \icon{At}{12}{krzysztofcieslik875@gmail.com}\\[1ex]
+    \icon{Linkedin}{12}{\href{https://www.linkedin.com/in/krzysztof-cieślik-968128223}{linkedin.com/in/krzysztof-cieślik-968128223}}\\[1ex]
+    \icon{Github}{12}{\href{https://github.com/Hathor875}{github.com/Hathor875}}\\[1ex]
+\end{minipage}
 
+%----------------------
+% Summary - Pixel Perfect Formatting
+%----------------------
+\cvsect{Summary}
 
-\vspace{0.5cm}
+\noindent
+I am an electronics specialist and embedded programmer with one year of professional experience.
+I specialize in electronic circuit design and embedded systems programming.
+I possess practical knowledge in electronics, automation, and computer science, which I apply
+in my work on developing new devices and prototypes.
 
+\vspace{0.5ex}
+\noindent
+I have experience working both individually and as part of a team in an R\&D environment.
+I also program automated validation and hardware testing solutions.
+Currently, I am expanding my competencies as both an electronics specialist and programmer
+beyond embedded systems. I also have experience with industrial and building automation systems,
+as well as hydraulics and pneumatics based on my earlier career.
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\cvsect{Doświadczenie zawodowe}
+\cvsect{Professional Experience}
 
 \begin{entrylist}
 	\entry
-		{październik 2024 -- obecnie}
+		{10.2024--present}
 		{Programmer - Electronic Designer}
 		{RADMOR S.A., Gdynia}
-		{Projektowanie i programowanie układów elektronicznych, rozwój prototypów, prace badawczo-rozwojowe}
+		{Designing and programming electronic circuits, prototype development, R\&D work}
 	\entry
-		{lipiec 2024 -- październik 2024}
-		{Stażysta w dziale rozwoju}
+		{07.2024--10.2024}
+		{R\&D Department Intern}
 		{RADMOR S.A., Gdynia}
-		{Wsparcie zespołu R\&D, testowanie i dokumentacja sprzętu elektronicznego}
+		{R\&D team support, electronic equipment testing and documentation}
 	\entry
-		{luty 2024 -- październik 2024}
-		{Korepetytor programowania dla dzieci i młodzieży}
+		{02.2024--10.2024}
+		{Programming Tutor for children and teenagers}
 		{Giganci Programowania, Gdańsk}
-		{Prowadzenie zajęć z podstaw programowania, Python, algorytmy}
+		{Teaching programming basics, Python, algorithms}
 	\entry
-		{grudzień 2023 -- czerwiec 2024}
-		{Technik Laboratorium komputerowego}
+		{12.2023--06.2024}
+		{Computer Laboratory Technician}
 		{ManpowerGroup, Gdańsk}
-		{Utrzymanie i wsparcie sprzętu komputerowego, administracja labem}
+		{Computer hardware maintenance and repair, lab administration}
 	\entry
-		{sierpień 2022 -- styczeń 2024}
-		{Technik obiektów}
+		{08.2022--01.2024}
+		{Facility Technician}
 		{Sodexo, Gdańsk}
-		{Konserwacja i naprawa instalacji elektrycznych, wsparcie techniczne obiektu}
+		{Electrical installation maintenance and repair, technical facility support}
 	\entry
-		{lipiec 2022 -- wrzesień 2022}
-		{Technik automatyki}
+		{07.2022--09.2022}
+		{Automation Technician}
 		{Ceramika Paradyż, Opoczno}
-		{Programowanie sterowników PLC, wsparcie IT i utrzymanie ruchu}
+		{PLC controller programming, IT support and maintenance}
 	\entry
-		{czerwiec 2021 -- wrzesień 2021}
-		{Technik automatyki}
+		{06.2021--09.2021}
+		{Automation Technician}
 		{CERSANIT GROUP, Opoczno}
-		{Konserwacja maszyn produkcyjnych, zapewnienie ciągłości procesu}
+		{Production machine maintenance, process continuity assurance}
 	\entry
-		{lipiec 2020 -- wrzesień 2020}
-		{Elektryk}
+		{07.2020--09.2020}
+		{Electrician}
 		{PKP Intercity Remtrak Sp. z o.o., Opoczno}
-		{Naprawa układów elektrycznych wagonów pasażerskich}
+		{Repair of electrical systems in passenger railway cars}
 \end{entrylist}
 
-%----------------------------------------------------------------------------------------
-% EDUCATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Edukacja}
-
-\begin{entrylist}
-	\entry
-		{2022 -- w trakcie}
-		{Inżynier, Informatyka (stacjonarne)}
-		{Polsko-Japońska Akademia Technik Komputerowych}
-		{Studia I stopnia, specjalizacja Aplikacje Internetowe}
-\end{entrylist}
+% --- END OF EDUCATION SECTION ---
 
 %----------------------------------------------------------------------------------------
 % ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
+\cvsect{Key Skills}
+
+% Two columns of skills with bullet points
+% Left column
+\begin{minipage}[t]{0.48\textwidth}
+\begin{itemize}
+  \item Python
+  \item Electronics
+  \item Electrical Engineering
+  \item Automation
+  \item Embedded Systems
+  \item Hardware Testing
+\end{itemize}
+\end{minipage}%
+\hfill
+% Right column
+\begin{minipage}[t]{0.48\textwidth}
+\begin{itemize}
+  \item Automated Validation (Python)
+  \item PCB Design
+  \item Microcontroller Programming
+  \item Equipment Diagnostics and Repair
+  \item C/C++
+  \item Linux
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm}
+
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{-\baselineskip}
-	\cvsect{Główne umiejętności}
+	\cvsect{Languages}
 	
-	Python\\
-	Elektronika\\
-	Inżynieria elektryczna
-\end{minipage}\hfill
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip}
-	\cvsect{Certyfikaty}
-	
-	Python Essentials 1\\
-	Computer Hardware Basics\\
-	CCNA: Introduction to Networks
-\end{minipage}\hfill
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip}
-	\cvsect{Języki}
-	
-	Polski – ojczysty\\
-	Angielski – B1
+	\begin{itemize}
+		\item Polish – native
+		\item English – B1
+	\end{itemize}
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
