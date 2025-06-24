@@ -41,6 +41,7 @@ jobs:
           git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
           cp main.pdf preview.jpg gh-pages/
           cd gh-pages
-          git add main.pdf preview.jpg
-          git commit -m "Auto-update CV and preview [skip ci]" || echo "No changes to commit"
-          git push
+          git add -A
+          git commit -m "Auto-update CV and preview [skip ci]" --allow-empty
+          git push --force
+
