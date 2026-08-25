@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Typst
         uses: typst-community/setup-typst@v5
@@ -42,7 +42,7 @@ jobs:
           "$IM" preview.png -quality 100 -background white -flatten preview.jpg
 
       - name: Upload artifacts (for debugging or download)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: cv-artifacts
           path: |

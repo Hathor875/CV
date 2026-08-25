@@ -147,13 +147,22 @@ architecture, and reliable engineering practices.
 )
 
 //----------------------------------------------------------------------
-// LANGUAGES
+// CERTIFICATIONS AND LANGUAGES
 //----------------------------------------------------------------------
 
-#cvsect[Languages]
-
-- Polish -- native
-- English -- B1
+#two-col(
+  [
+    #cvsect[Certifications]
+    - Python Essentials 1
+    - Computer Hardware Basics
+    - CCNA: Introduction to Networks
+  ],
+  [
+    #cvsect[Languages]
+    - Polish -- native
+    - English -- B1
+  ],
+)
 
 #pagebreak()
 
