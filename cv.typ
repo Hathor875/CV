@@ -17,7 +17,6 @@
   stack(
     spacing: 0.85em,
     icon-line(fa.location, [Gdańsk, Pomerania, Poland]),
-    icon-line(fa.phone, [+48 REDACTED]),
     icon-line(fa.at, [krzysztofcieslik875\@gmail.com]),
     icon-line(
       fa.linkedin,
@@ -197,26 +196,6 @@ Clean architecture, maintainability, traceability, and solid engineering practic
 modular design, layered firmware structure) guide my work. I strive to build solutions that
 "ratchet forward": each iteration should make the system stronger, cleaner, and easier to
 maintain.
-
-#cvsect[Engineering Thesis Project]
-
-As the leader of a five-person engineering team, I developed a system for creating
-structured technical documents with templating, metadata management, and automatic
-versioning. The project was built in Python (FastAPI) with a React-based GUI running inside
-Tauri, allowing cross-platform distribution and a native-application feel.
-
-My responsibilities included:
-
-- architecture design and toolchain definition
-- CI/CD pipeline development
-- workflow automation and project structure
-- documentation standards and requirement gathering
-- internal team tools (time tracking, communication utilities)
-- maintenance of the local hosting environment for services
-
-This project reflects how I work: treating software as a well-designed system rather than a
-collection of scripts. I place strong emphasis on clear separation of concerns,
-maintainability, and reproducibility so the application can evolve with the team's needs.
 
 #cvsect[Why This Page Exists]
 
