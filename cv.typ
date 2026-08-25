@@ -223,13 +223,6 @@ maintain.
     [Go],
     [One pull request under review: table scrolling no longer offset by the header height.],
   ),
-  entry(
-    [2025],
-    [Java-FreeEdu, Labella],
-    [Java, CSS],
-    [Seven merged pull requests: password hashing, a parent view, role-based redirects,
-      build tooling, and interface fixes.],
-  ),
 )
 
 #cvsect[Why This Page Exists]
