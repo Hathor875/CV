@@ -1,0 +1,62 @@
+name: Build CV
+
+on:
+  push:
+    paths:
+      - '**.typ'
+      - 'fonts/**'
+      - '.github/workflows/typst.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: '0.14.2'
+
+      # The published file stays main.pdf even though the source is now
+      # cv.typ, so links to the PDF already handed out keep working.
+      - name: Build PDF
+        run: typst compile --font-path fonts cv.typ main.pdf
+
+      - name: Render first page
+        run: typst compile --font-path fonts --pages 1 --ppi 300 cv.typ preview.png
+
+      - name: Convert preview to JPG
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          # ImageMagick 7 renamed `convert` to `magick`; runners still ship 6.
+          if command -v magick >/dev/null; then IM=magick; else IM=convert; fi
+          "$IM" preview.png -quality 100 -background white -flatten preview.jpg
+
+      - name: Upload artifacts (for debugging or download)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-artifacts
+          path: |
+            main.pdf
+            preview.jpg
+
+      - name: Deploy to GitHub Pages (gh-pages branch)
+        if: github.event_name != 'pull_request'
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git clone --depth 1 --branch gh-pages https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          cp main.pdf preview.jpg gh-pages/
+          cd gh-pages
+          git add -A
+          git commit -m "Auto-update CV and preview [skip ci]" --allow-empty
+          git push --force

@@ -1,5 +1,24 @@
-tex by:
-Copyright (c) <2018> <Jan Vorisek>
+LICENSING
+=========
+
+This repository contains three kinds of material, licensed differently.
+Read the section that matches what you want to reuse.
+
+
+-------------------------------------------------------------------------------
+1. THE TEMPLATE AND TYPESETTING CODE                                        MIT
+-------------------------------------------------------------------------------
+
+Applies to: template.typ, .github/workflows/typst.yml, .vscode/settings.json
+
+The design originates from the "Developer CV" LaTeX template by Jan Vorisek,
+itself based on a template by Jan Küster, distributed through
+LaTeXTemplates.com. In August 2026 the document was ported from LaTeX to
+Typst; template.typ is a derivative of the original developercv.cls and stays
+under the same MIT licence.
+
+Copyright (c) 2018 Jan Vorisek
+Copyright (c) 2026 Krzysztof Cieślik (Typst port)
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -21,3 +40,56 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+
+-------------------------------------------------------------------------------
+2. THE BUNDLED FONTS                                            SIL OFL 1.1
+-------------------------------------------------------------------------------
+
+The fonts are committed to this repository so that the build is reproducible
+without installing anything system-wide. Both are redistributed unmodified,
+which is what keeps their reserved font names usable here.
+
+  fonts/Raleway-v4020-Regular.otf
+  fonts/Raleway-v4020-Bold.otf
+
+    Copyright 2010 The Raleway Project Authors (impallari@gmail.com),
+    with Reserved Font Name "Raleway".
+    Licensed under the SIL Open Font License, Version 1.1.
+    Full text: fonts/Raleway-OFL.txt   Change history: fonts/Raleway-FONTLOG.txt
+
+    These are the official static builds released by the Raleway project
+    (github.com/impallari/Raleway, fonts/v4020), copied byte for byte. They
+    are NOT modified versions, so clause 3 of the OFL — which forbids a
+    modified version from using the reserved font name — is not engaged.
+    If you ever regenerate them, do not cut static instances out of the
+    variable font and keep calling them "Raleway": instancing counts as a
+    modification under the OFL and the name would then have to change.
+
+  fonts/FontAwesome6-Solid.otf
+  fonts/FontAwesome6-Brands.otf
+
+    Copyright Fonticons, Inc. — Font Awesome Free 6.
+    The font files are licensed under the SIL Open Font License, Version 1.1.
+    Full text, together with the CC BY 4.0 terms covering the icon artwork
+    and the MIT terms covering Font Awesome's code: fonts/FontAwesome-LICENSE.txt
+
+    The LinkedIn and GitHub marks used in the header come from the brands
+    font. They are trademarks of their respective owners, are used solely to
+    refer to profiles on those services, and imply no endorsement.
+
+
+-------------------------------------------------------------------------------
+3. THE CV CONTENT                                          all rights reserved
+-------------------------------------------------------------------------------
+
+Applies to: cv.typ, and any PDF built from it.
+
+The personal data, employment history and prose of the CV are not covered by
+the MIT grant in section 1. That licence covers how the document is typeset,
+not what it says.
+
+Copyright (c) 2026 Krzysztof Cieślik. All rights reserved.
+
+You are welcome to take template.typ and build your own CV with it under the
+MIT terms above. Please replace the contents of cv.typ with your own.

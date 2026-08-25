@@ -1,0 +1,8 @@
+{
+  // Raleway and Font Awesome are bundled in fonts/ rather than installed
+  // system-wide. Without this, the in-editor preview silently falls back
+  // to a different typeface while the CLI build looks correct.
+  "tinymist.fontPaths": ["${workspaceFolder}/fonts"],
+  "tinymist.exportPdf": "onSave",
+  "tinymist.outputPath": "$root/$name"
+}
