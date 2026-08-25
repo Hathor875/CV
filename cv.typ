@@ -206,6 +206,32 @@ modular design, layered firmware structure) guide my work. I strive to build sol
 "ratchet forward": each iteration should make the system stronger, cleaner, and easier to
 maintain.
 
+#cvsect[Open Source]
+
+#entrylist(
+  entry(
+    [2026],
+    [Euro-Office --- open-source office suite],
+    [C++, JavaScript],
+    [Four pull requests under review: trailing-path normalization and symlink handling
+      in the core file scanner, a GoogleTest suite wired into CTest, and removal of a
+      third-party analytics loader.],
+  ),
+  entry(
+    [2026],
+    [Fyne --- GUI toolkit for Go],
+    [Go],
+    [One pull request under review: table scrolling no longer offset by the header height.],
+  ),
+  entry(
+    [2025],
+    [Java-FreeEdu, Labella],
+    [Java, CSS],
+    [Seven merged pull requests: password hashing, a parent view, role-based redirects,
+      build tooling, and interface fixes.],
+  ),
+)
+
 #cvsect[Why This Page Exists]
 
 A résumé lists skills and history. This page explains how I think, how I approach
