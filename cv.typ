@@ -160,7 +160,7 @@ architecture, and reliable engineering practices.
   [
     #cvsect[Languages]
     - Polish -- native
-    - English -- B1
+    - English -- B2
   ],
 )
 
